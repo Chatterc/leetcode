@@ -25,11 +25,14 @@
 from typing import List
 
 class Solution:
+    
+    def __init__(self):
+        self.ans = []
+        
     def buildArray(self, nums: List[int]) -> List[int]:
-        ans = []
         for i in range(len(nums)):
-            ans.append(nums[nums[i]])
-        return ans
+            self.ans.append(nums[nums[i]])
+        return self.ans
     
 if __name__ == '__main__':
     test_case_1 = [0,2,1,5,3,4]
