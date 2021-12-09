@@ -25,15 +25,32 @@ from typing import List
 
 
 class Solution:
+    """
+    Python Class the provides attributes and get method to concatenate two arrays of integers. 
+    """
     
     def __init__(self):
+        # Init empty python lists
         self.first_array = []
         self.second_array = []
         
     def getConcatenation(self, nums: List[int]) -> List[int]:
+        """
+        Get method to concatenate two arrays of integers
+
+        Args:
+            nums (List[int]): An array of integers
+
+        Returns:
+            List[int]: A concatenated array
+        """
+        
+        # Travesal of an array of integers
         for i in range(len(nums)):
             self.first_array.append(nums[i])
             self.second_array.append(nums[i])
+        
+        # Python operator to concatenate two arrays 
         ans = self.first_array + self.second_array
         return ans
     
