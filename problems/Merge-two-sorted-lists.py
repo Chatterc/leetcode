@@ -23,10 +23,7 @@ class ListNode:
         self.val = val
         self.next = next
 
-class LinkedList:
-    def __init__(self, head=None):
-        self.head = head
-        
+      
 class Solution:
     def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
         dummy = ListNode()
@@ -62,18 +59,19 @@ def main():
     # Constructing the first linked list
     n3 = ListNode(val=4, next=None)
     n2 = ListNode(val=2, next=n3)
-    list1 = LinkedList(head=ListNode(1, next=n2))  
+    list1 = ListNode(1, next=n2)
     
     # Constructing the second linked list
     n3 = ListNode(val=4, next=None)
     n2 = ListNode(val=3, next=n3)
-    list2 = LinkedList(head=ListNode(val=1, next=n2)) 
+    list2 = ListNode(val=1, next=n2)
     
     # Merge the two sorted linked list
-    ans = Solution().mergeTwoLists(list1.head, list2.head)
+    ans = Solution().mergeTwoLists(list1, list2)
     print(ans) # Expected = [1,1,2,3,4,4]
     
 
 if __name__ == '__main__':
     main()
+    
     
