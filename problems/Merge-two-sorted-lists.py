@@ -22,6 +22,21 @@ class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val
         self.next = next
+    
+# Linked List class contains a Node object
+class LinkedList:
+ 
+    # Function to initialize head
+    def __init__(self, head=None):
+        self.head = head
+ 
+    # This function prints contents of linked list
+    # starting from head
+    def printList(self):
+        temp = self.head
+        while (temp):
+            print (temp.val)
+            temp = temp.next
 
       
 class Solution:
@@ -67,8 +82,8 @@ def main():
     list2 = ListNode(val=1, next=n2)
     
     # Merge the two sorted linked list
-    ans = Solution().mergeTwoLists(list1, list2)
-    print(ans) # Expected = [1,1,2,3,4,4]
+    ans = Solution().mergeTwoLists(list1, list2)   
+    LinkedList(head=ans).printList() # Expected = [1,1,2,3,4,4]
     
 
 if __name__ == '__main__':
